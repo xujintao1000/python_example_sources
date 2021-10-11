@@ -55,8 +55,11 @@ print(a, b, rest)
 *head, b, c, d = range(6)
 print(head, b, c, d)
 
+
+
 print("--- --- ---")
 # 文字展示
+# 打印一个table
 print("--- 文字展示 ---")
 
 metro_areas = [
@@ -67,12 +70,18 @@ metro_areas = [
     ('Sao Paulo', 'BR', 19.649, (-23.547778, -46.635833)),
 ]
 
-
+# :20 保持20个间距字符
 print('{:20} | {:^9} | {:^9}'.format('', 'lat.', 'long.'))
 fmt = '{:20} | {:9.4f} | {:9.4f}'
 for name, cc, pop, (latitude, longitude) in metro_areas:  # <2>
     if longitude <= 0:  # <3>
         print(fmt.format(name, latitude, longitude))
+
+
+
+
+
+
 
 print("--- --- ---")
 # 具名元祖

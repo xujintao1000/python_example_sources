@@ -5,7 +5,7 @@ from random import choice
 Card = collections.namedtuple('Card', ['rank', 'suit'])
 
 
-# 声明一副扑克牌，不包含 大小王， 公52张牌
+# 声明一副扑克牌，不包含 大小王， 共52张牌
 class Poker:
     ranks = [str(n) for n in range(2, 11)] + list('JQKA')  # ranks = 2-10 JQKA
     suits = 'spades diamonds clubs hearts'.split()  # suits = 黑桃 方块 梅花 红桃
@@ -14,9 +14,11 @@ class Poker:
         self._cards = [Card(rank, suit) for suit in self.suits
                        for rank in self.ranks]
 
+    # 召唤 len(poker)
     def __len__(self):
         return len(self._cards)
 
+    # 召唤 poker[]
     def __getitem__(self, position):
         return self._cards[position]
 
