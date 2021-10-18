@@ -1,3 +1,19 @@
+"""
+扑克牌 类的创建  【52张，不包含大小王 】
+
+知识点：
+1.  collections.namedtuple
+        使用方式： Card = collections.namedtuple('Card', ['rank', 'suit'])
+                cards = [ Card(rank, suit)   for suit in self.suits
+                                             for rank in self.ranks]
+        使用解释： 创建一个简单的Card 类，包含两个变量，分别是用于存储 数字【2-10 JQKA】， 以及花色【黑桃 方块 梅花 红桃】
+2.  def __len__(self):
+
+3.  def __getitem__(self, position):
+
+"""
+
+
 import collections
 from random import choice
 
